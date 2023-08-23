@@ -1,5 +1,7 @@
-export const colorCode = () => {
-  throw new Error('Delete this line and implement this function')
+const colors = ['black', 'brown', 'red', 'orange', 'yellow', 'green', 'blue', 'violet', 'grey', 'white']
+
+export const colorCode = (color: string) => {
+  return colors.indexOf(color)
 }
 
-export const COLORS = undefined
+export const COLORS = colors
