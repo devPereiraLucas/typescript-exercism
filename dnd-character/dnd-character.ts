@@ -20,7 +20,7 @@ export class DnDCharacter {
   public static generateAbilityScore(): number {
     const values: number[] = []
     for (let i = 0; i < 4; i++) {
-      values.push(Math.floor(Math.random() * 6) + 1)
+      values.push(DnDCharacter.generateRamdomScore())
     }
 
     values.sort()
@@ -30,5 +30,9 @@ export class DnDCharacter {
 
   public static getModifierFor(abilityValue: number): number {
     return Math.floor((abilityValue - 10) / 2)
+  }
+
+  private static generateRamdomScore(): number {
+    return Math.floor(Math.random() * 6) + 1
   }
 }
