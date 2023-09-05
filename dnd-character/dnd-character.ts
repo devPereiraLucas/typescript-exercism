@@ -7,6 +7,15 @@ export class DnDCharacter {
   public charisma: number
   public hitpoints: number
 
+  constructor() {
+    this.strength = DnDCharacter.generateAbilityScore()
+    this.dexterity = DnDCharacter.generateAbilityScore()
+    this.constitution = DnDCharacter.generateAbilityScore()
+    this.intelligence = DnDCharacter.generateAbilityScore()
+    this.wisdom = DnDCharacter.generateAbilityScore()
+    this.charisma = DnDCharacter.generateAbilityScore()
+    this.hitpoints = 10 + DnDCharacter.getModifierFor(this.constitution)
+  }
 
   public static generateAbilityScore(): number {
     const values = []
