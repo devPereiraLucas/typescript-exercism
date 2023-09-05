@@ -20,6 +20,6 @@ export class DnDCharacter {
   }
 
   public static getModifierFor(abilityValue: number): number {
-    throw new Error('Remove this statement and implement this function')
+    return Math.floor((abilityValue - 10) / 2)
   }
 }
