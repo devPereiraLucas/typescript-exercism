@@ -18,7 +18,7 @@ export class DnDCharacter {
   }
 
   public static generateAbilityScore(): number {
-    const values = []
+    const values: number[] = []
     for (let i = 0; i < 4; i++) {
       values.push(Math.floor(Math.random() * 6) + 1)
     }
