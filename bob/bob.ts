@@ -1,4 +1,4 @@
-const isQuestion = (message: string): boolean => message.endsWith('?')
+const isQuestion = (message: string): boolean => message.trimEnd().endsWith('?')
 const isYelling = (message: string): boolean => message.toUpperCase() === message && message.toLowerCase() !== message
 const isSilence = (message: string): boolean => message.trim() === ''
 
