@@ -5,12 +5,12 @@ const isSilence = (message: string): boolean => message.trim() === ''
 export function hey(message: string): string {
 
   if (isSilence(message)) {
-    return 'Fine. Be that way!'
+    return "Fine. Be that way!"
   } else if (isYelling(message)) {
-    return 'Whoa, chill out!'
+    return "Whoa, chill out!"
   } else if (isQuestion(message)) {
-    return 'Sure.'
+    return "Sure."
   } else {
-    return 'Whatever.'
+    return "Whatever."
   }
 }
